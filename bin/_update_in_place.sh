@@ -16,7 +16,8 @@ wget \
 --no-dns-cache -4 \
 --no-verbose \
 --directory-prefix "$APP_PATH/sites/" \
-"$SITE"
+--load-cookies ./cookies \
+"$SITE$SEED_PAGE"
 
 
 # --no-dns-cache  <--  local cache seems to be slowing things down
