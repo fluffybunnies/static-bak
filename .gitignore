@@ -5,6 +5,7 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 config.local.sh
+cookies
 web
 log/*
 sites/*
