@@ -58,8 +58,8 @@ server {
 #
 #	#server_tokens off;
 #	#ssl on;
-#	ssl_certificate $installDir/install/ssl/ranktt.pem;
-#	ssl_certificate_key $installDir/install/ssl/ranktt-key.pem;
+#	ssl_certificate $installDir/install/ssl/mysite.pem;
+#	ssl_certificate_key $installDir/install/ssl/mysite-key.pem;
 #	
 #	return 404;
 #}
