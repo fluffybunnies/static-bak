@@ -30,11 +30,7 @@ server {
 
 	# Get default wget index.html load on base domain request
 	location = / {
-		try_files /index.html =404;
-	}
-	# Disable http://mydomain.com/index as a duplicate content
-	location = /index {
-		return 404;
+		try_files /index.html $request_uri;
 	}
 
 	location / {
