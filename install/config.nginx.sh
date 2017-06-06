@@ -30,7 +30,7 @@ server {
 
 	# Get default wget index.html load on base domain request
 	location = / {
-		try_files /index.html $request_uri;
+		try_files /index.html \$request_uri;
 	}
 
 	location / {
