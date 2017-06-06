@@ -18,7 +18,6 @@ server {
 	server_name $SITE;
 	root $installDir/web;
 	autoindex off;
-	#index index.html; # not working, doesnt work inside location block either
 
 	access_log /var/log/nginx/${nginxKey}_access_log.log;
 	error_log /var/log/nginx/${nginxKey}_error_log.log;
@@ -28,6 +27,15 @@ server {
 	gzip_buffers 4 8k; 
 	gzip_proxied any; # enable proxy for the fcgi requests
 	gzip_types text/plain text/css application/x-javascript text/javascript application/json; 
+
+	# Get default wget index.html load on base domain request
+	location = / {
+		try_files /index.html =404;
+	}
+	# Disable http://mydomain.com/index as a duplicate content
+	location = /index {
+		return 404;
+	}
 
 	location / {
 		# set expire headers for assets
