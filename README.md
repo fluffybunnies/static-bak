@@ -27,9 +27,9 @@ Reqs: none (software + credentials installed for you)
 ```
 # 1. Edit ./sire/_deploy/config.chef.sh
 # 2. Deploy sire to remote server:
-./sire/index.sh _deploy
+./sire/index.sh _deploy --target=ec2-54-176-178-234.us-west-1.compute.amazonaws.com
 # 3. Install static-bak on remote server:
-./sire/signal.sh static-bak
+./sire/signal.sh static-bak --target=ec2-54-176-178-234.us-west-1.compute.amazonaws.com
 ```
 -->
 
