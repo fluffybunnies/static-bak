@@ -11,7 +11,7 @@ if [ "$SITE" == "" ]; then
 fi
 
 hc=`curl -m5 -sS $SITE`
-if [ "`echo \"$hc\" | grep -m1 '<body '`" == "" ]; then
+if [ "`echo \"$hc\" | grep -m1 '<body '`" == "" ] && [ "`echo \"$hc\" | grep -m1 '<body>'`" == "" ]; then
 	echo "failed to find snippet on homepage: '<body '"
 	exit 1
 fi
